@@ -3,10 +3,9 @@
 import { ChevronDownIcon } from "lucide-react";
 import { FormEvent, useState } from "react";
 
+// ----------------------------------------------------------------------
+
 const HomepageReservation = () => {
-  const [nama, setNama] = useState("");
-  const [jumlah, setJumlah] = useState("1");
-  const [tanggal, setTanggal] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -14,19 +13,7 @@ const HomepageReservation = () => {
     setLoading(true);
 
     setTimeout(() => {
-      const pesan = `*Form Reservasi Coconam Food*
-
-Halo kak, saya mau reservasi meja nih, berikut datanya :
-
-Nama lengkap : *${nama}*
-Jumlah orang : *${jumlah} orang*
-Tanggal & Waktu : *${tanggal}*`;
-
-      const encodedMessage = encodeURIComponent(pesan);
-      const nomor = "6282214487498"; // ganti dengan nomor kamu
-      const waLink = `https://wa.me/${nomor}?text=${encodedMessage}`;
-
-      window.open(waLink, "_blank");
+      alert("Sent");
       setLoading(false);
     }, 2000);
   };
@@ -73,8 +60,6 @@ Tanggal & Waktu : *${tanggal}*`;
                         <input
                           id="full-name"
                           type="text"
-                          value={nama}
-                          onChange={(e) => setNama(e.target.value)}
                           className="block w-full rounded-lg text-sm lg:text-base p-4 outline-1 -outline-offset-1 outline-custom-green-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-custom-green-500"
                         />
                       </div>
@@ -90,9 +75,6 @@ Tanggal & Waktu : *${tanggal}*`;
                         <select
                           id="total-person"
                           name="total-person"
-                          value={jumlah}
-                          onChange={(e) => setJumlah(e.target.value)}
-                          autoComplete="total-person"
                           className="col-start-1 row-start-1 w-full text-sm lg:text-base appearance-none rounded-lg py-4 pr-8 pl-4 outline-1 -outline-offset-1 outline-custom-green-500 focus:outline-2 focus:-outline-offset-2 focus:outline-custom-green-500 cursor-pointer"
                         >
                           {Array.from({ length: 10 }, (_, i) => (
@@ -118,8 +100,6 @@ Tanggal & Waktu : *${tanggal}*`;
                         <input
                           id="date-time"
                           type="text"
-                          value={tanggal}
-                          onChange={(e) => setTanggal(e.target.value)}
                           className="block w-full rounded-lg text-sm lg:text-base p-4 outline-1 -outline-offset-1 outline-custom-green-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-custom-green-500"
                         />
                       </div>
