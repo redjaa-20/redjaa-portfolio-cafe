@@ -17,9 +17,9 @@ const HomepageHero = () => {
           </ScrollReveal>
           <ScrollReveal type="slide-up" delay={0.3}>
             <div className="leading-relaxed text-sm lg:text-base mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto reprehenderit ut necessitatibus numquam iure vitae,
-              totam, fuga provident beatae tempora.
+              Tempat terbaik untuk bekerja, berdiskusi, atau sekadar menenangkan
+              pikiran. Dengan kopi premium dan suasana produktif, inspirasi
+              selalu mengalir di sini.
             </div>
           </ScrollReveal>
           <div className="flex items-center gap-6 lg:gap-8 text-sm lg:text-base">

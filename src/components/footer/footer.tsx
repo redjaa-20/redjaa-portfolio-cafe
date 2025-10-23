@@ -17,9 +17,8 @@ const Footer = () => {
                 Cafe
               </div>
               <div className="leading-relaxed text-sm lg:text-base mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto reprehenderit ut necessitatibus numquam iure vitae,
-                totam, fuga provident beatae tempora.
+                Tempat di mana ide lahir dari setiap tegukan kopi. Hubungi kami
+                untuk reservasi, kolaborasi, atau sekadar diskusi santai.
               </div>
             </div>
             <div className="col-span-3">
@@ -85,7 +84,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row lg:items-center justify-between text-sm gap-y-3">
             <div>© 2025. Redjaa Cafe. All rights reserved.</div>
             <div>
-              <span>Made with pasion by </span>
+              <span>Made with passion by </span>
               <Link
                 href="https://redjaa.my.id"
                 className="font-bold hover:underline underline-offset-4"
