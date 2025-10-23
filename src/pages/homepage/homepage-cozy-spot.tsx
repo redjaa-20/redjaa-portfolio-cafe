@@ -2,7 +2,8 @@
 
 import ScrollReveal from "@/components/framer-animation/scroll-reveal";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useRef, useState } from "react";
+import Image from "next/image";
+import { useRef } from "react";
 
 // ----------------------------------------------------------------------
 
@@ -69,8 +70,10 @@ const HomepageCozySpot = () => {
               className="flex gap-4 overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             >
               {images.map((src, idx) => (
-                <img
+                <Image
                   key={idx}
+                  height={1024}
+                  width={800}
                   src={src}
                   alt={`Spot ${idx + 1}`}
                   className="flex-shrink-0 w-70 h-100 lg:w-90 lg:h-130 object-cover rounded-2xl shadow-md"
